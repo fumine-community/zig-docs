@@ -1,0 +1,7 @@
+:root {
+    --accent-color: #333333;
+    --shadow: 0 2px 4px var(--accent-color);
+}
+body {
+    margin: 0;
+}
