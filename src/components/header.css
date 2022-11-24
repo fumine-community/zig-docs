@@ -1,4 +1,56 @@
 nav {
-    background-color: var(--accent-color);
+    background-color: var(--default-color);
     box-shadow: 0 2px 4px #33333325;
+    padding: 0 20px;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.logo {
+    display: block;
+    padding: 10px 20px;
+    color: var(--accent-color);
+    font-size: 16px;
+    text-decoration: none;
+}
+.nav--links {
+    display: flex;
+    align-items: center;
+}
+.nav--link {
+    color: var(--accent-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 200ms ease-in;
+    display: block;
+}
+.nav--link:hover {
+    opacity: 0.5;
+}
+
+.nav--link__primary {
+    background-color: var(--accent-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 200ms ease-in;
+    color: var(--default-color);
+}
+
+.nav--link:hover {
+    opacity: 0.25;
+    background-color: var(--accent-color)25;
+}
+.nav--mobile {
+    display: none;
+}
+.nav--toggle {
+    width: 24px;
+    height: 24px;
+    padding: 10px;
 }
