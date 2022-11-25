@@ -1,7 +1,9 @@
 :root {
     --default-color: 17, 17, 17;
+    --oposite-color: 224, 224, 224;
     --accent-color: 247, 164, 29;
     --shadow: 0 2px 4px rgba( var(--default-color), .25);
+    --shadow-light: 0 2px 4px rgba( var(--oposite-color), .25 );
 }
 body {
     margin: 0;
@@ -11,9 +13,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: rgb(var(--default-color));
+    text-align: start;
 }
 p {
     margin-bottom: 20px;
+    text-align: start !important;
 }
 h2 {
     margin-bottom: 20px;
@@ -27,7 +31,17 @@ h2 {
 section {
     padding: 200px 0;
 }
+section.black {
+    background-color: rgb(var(--default-color));
+}
+section.black h2 {
+    color: white;
+}
+ul {
+    margin: 0;
 
+    padding-left: 20px;
+}
 
 /* Decorators */
 .dec--in-dev {
@@ -40,4 +54,70 @@ section {
 }
 .dec--center {
     padding: 20px;
+}
+
+/* Carousel */
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+  
+.carousel-cell {
+    width: 100%;
+}
+
+.carousel-content {
+    margin: 20px 100px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: rgba( var(--oposite-color), );
+    box-shadow: var(--shadow);
+}
+.carousel-img {
+    height: 450px;
+    overflow: hidden;
+}
+.carousel-img img {
+    object-fit: contain;
+    width: 100%;
 }

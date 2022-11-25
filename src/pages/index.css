@@ -28,9 +28,11 @@ main .container {
     /* -webkit-text-fill-color: transparent; */
     color: rgb(var(--accent-color));
     width: 50%;
+    text-align: start;
 }
 .main--text p {
     color: rgb(var(--accent-color));
+    text-align: start;
 }
 .background--gradient {
     background-color: rgb(var(--default-color));
@@ -39,4 +41,44 @@ main .container {
     left: 0;
     bottom: 0;
     width: 50vw;
+}
+.cards--section {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+.card--wrap:last-child {
+    margin-right: 0;
+}
+.card--wrap {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    width: 33%;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: var(--shadow);
+    bottom: -50px;
+    margin-right: 20px;
+}
+.card--wrap p {
+    text-align: start;
+}
+.card--wrap h3 {
+    color: rgb(var(--accent-color));
+}
+.card--wrap .pictogram {
+    position: absolute;
+    opacity: 0.10;
+
+    top: auto;
+    left: auto;
+    bottom: -25%;
+    right: -25%;
+}
+section.black {
+    padding-top: 50px;
+    padding-bottom: 0;
 }
