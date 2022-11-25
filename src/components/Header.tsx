@@ -1,5 +1,5 @@
 import "./header.css";
-import { createSignal }from "solid-js"
+import { createSignal, Show }from "solid-js"
 
 export default () => {
     const [navbarToggled, setToggle] = createSignal(false);
@@ -12,10 +12,20 @@ export default () => {
                 <a href="/docs" className="nav--link">Playground</a>
                 <a href="/docs" className="nav--link">Contributing</a>
                 <a href="/docs" className="nav--link">Tooling</a>
+                <a href="/docs" className="nav--link">Download</a>
                 <a href="/docs" className="nav--link__primary">Get started</a>
-                <div className="nav--mobile">
-                    <img onClick={() => {setToggle(!navbarToggled)}} class="nav--toggle" src="/static/icons/menu.svg"></img>
-                </div>
+            </div>
+            <div className="nav--mobile">
+                <img onClick={() => {setToggle(!navbarToggled())}} class="nav--toggle" src="/static/icons/menu.svg"></img>
+                <Show when={navbarToggled()}>
+                    <div className="nav--mobile-list">
+                        <a href="/docs" className="nav--link">Docs</a>
+                        <a href="/docs" className="nav--link">Playground</a>
+                        <a href="/docs" className="nav--link">Contributing</a>
+                        <a href="/docs" className="nav--link">Download</a>
+                        <a href="/docs" className="nav--link__primary">Get started</a>
+                    </div>
+                </Show>                
             </div>
         </nav>
     )

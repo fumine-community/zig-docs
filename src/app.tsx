@@ -1,12 +1,14 @@
 import { MountableElement, render } from "solid-js/web";
-import Header from "./components/Header";
+import { Router} from "solid-app-router";
+import AppRoutes from "./router";
 
 render(
     () => {
         return <>
-            <Header/>
-            <h1>Hello, world!</h1>
+            <Router>
+                <AppRoutes/>   
+            </Router>
         </>
     },
     document.getElementById("app") as MountableElement
-)
+);

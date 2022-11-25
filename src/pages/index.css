@@ -1,0 +1,42 @@
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+code {
+    background-color: rgb(var(--default-color));
+    color: #ffffff;
+    padding: 10px 20px;
+    height: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    display: block;
+}
+main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.main--text h1, .main--text h2 {
+    font-size: 50px;
+    /* TODO: Place here bubbles */
+    /* background: linear-gradient(to right, rgb(var(--accent-color)) 75%, rgb(var(--default-color))); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    color: rgb(var(--accent-color));
+    width: 50%;
+}
+.main--text p {
+    color: rgb(var(--accent-color));
+}
+.background--gradient {
+    background-color: rgb(var(--default-color));
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50vw;
+}

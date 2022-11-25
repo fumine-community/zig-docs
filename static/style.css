@@ -1,15 +1,43 @@
 :root {
-    --default-color: #111111;
-    --accent-color: #f7a41d;
-    --shadow: 0 2px 4px var(--accent-color);
+    --default-color: 17, 17, 17;
+    --accent-color: 247, 164, 29;
+    --shadow: 0 2px 4px rgba( var(--default-color), .25);
 }
 body {
     margin: 0;
-    margin-top: 50px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    color: var(--default-color);
+    color: rgb(var(--default-color));
+}
+p {
+    margin-bottom: 20px;
+}
+h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.container {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+}
+section {
+    padding: 200px 0;
+}
+
+
+/* Decorators */
+.dec--in-dev {
+    padding: 2px 4px;
+    background-color: rgb(var(--accent-color));
+    border-radius: 2px;
+    font-weight: 500;
+    color:rgb(var(--default-color));
+    font-size: 14px;
+}
+.dec--center {
+    padding: 20px;
 }
