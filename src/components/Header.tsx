@@ -1,10 +1,11 @@
+import { createSignal, Show }from "solid-js";
+import Warning from "./Warning";
 import "./header.css";
-import { createSignal, Show }from "solid-js"
 
 export default () => {
     const [navbarToggled, setToggle] = createSignal(false);
 
-    return (
+    return (<>
         <nav>
             <a href="/" class="logo">Zig Language</a>
             <div class="nav--links">
@@ -28,5 +29,6 @@ export default () => {
                 </Show>                
             </div>
         </nav>
-    )
+        <Warning title="In development" text="View of website is some kinda... Broken"/>
+    </>)
 }
