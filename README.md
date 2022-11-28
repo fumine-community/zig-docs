@@ -2,6 +2,7 @@
 # Unofficial zig docs
 
 > **Warning**
+> 
 > Website is in development, wait until release!
 
 This repo contains code of [fumine's implementation zig language documentation](https://zig.fumine.ru).
@@ -22,6 +23,17 @@ simple, understandable docs.
     <img src="docs/old-docs.png" alt="img not loaded">
     <i>Old version of docs</i>
 </div>
+
+## Planned features
+
+1. [ ] Full step-by-step tutorial to start programming in zig.
+2. [ ] Newbye tutorial to start programming in Zig.
+3. [ ] Fully documented Standart Libraries.
+4. [ ] Tooling overview.
+5. [ ] Live display CI/CD of Zig core repository and other, importand projects.
+6. [ ] Online code REPL for fast exchaning with code.
+7. [ ] Blog transfer from Andrew twitter, Zig discords and official blog part in Zig website.
+8. [ ] (This waits until decion on package manager) centralized packages view.
 
 ## References
 
